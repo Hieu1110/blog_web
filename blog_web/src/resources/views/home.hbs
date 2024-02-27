@@ -1,0 +1,46 @@
+<section class="home" id="home">
+    <div class="home-text container">
+        <h2 class="home-title">My Blog</h2>
+    </div>
+</section>
+
+
+<div class="container">
+
+    <div class="post-filter container">
+        <a href="/"><span class="filter-item {{#unless queryType}}active-filter{{/unless}}">All</span></a>
+        {{#each blogTypes}}
+        <a href="/?blogType={{this}}">
+            <span class="filter-item {{#if (eq ../queryType this)}} active-filter {{/if}}"
+                data-filter="{{this}} ">{{this}}</span>
+        </a>
+        {{/each}}
+    </div>
+
+    <div class="post container">
+        {{#each blogs}}
+        <div class="post-box {{this.blogType}}">
+            <a href="/blogs/{{this.slug}}"><img src="{{this.blogImage}}" class="post-img"></a>
+            <h2 class="category">{{this.blogType}}</h2>
+            <a href="/blogs/{{this.slug}}" class="post-title">{{this.blogPreviewName}}</a>
+            <span class="post-date">{{moment this.updatedAt "LL"}}</span>
+            <p class="post-description">{{this.blogPreviewInfo}}</p>
+            <div class="profile">
+                <img src="{{this.author.avatar}}" alt="" class="profile-img">
+                <span class="profile-name">{{this.author.username}}</span>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    <!-- Pagination -->
+    <nav class="my-4" aria-label="...">
+        <ul class="pagination pagination-circle justify-content-center">
+            {{#each pages}}
+            <li class="page-item {{#if active}}active{{/if}}">
+                <a class="page-link" href="/?page={{this.page}}">{{this.page}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </nav>
+</div>

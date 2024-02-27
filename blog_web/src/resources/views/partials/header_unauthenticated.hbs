@@ -1,0 +1,52 @@
+<header>
+  <!-- Intro settings -->
+  <style>
+    #intro {
+      /* Margin to fix overlapping fixed navbar */
+      margin-top: 58px;
+    }
+
+    @media (max-width: 991px) {
+      #intro {
+        /* Margin to fix overlapping fixed navbar */
+        margin-top: 45px;
+      }
+    }
+  </style>
+
+  <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top"
+    style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  border: 5px;">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="/">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/vi/f/ff/Logo_Tr%C6%B0%E1%BB%9Dng_C%C3%B4ng_ngh%E1%BB%87_Th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_B%C3%A1ch_khoa_H%C3%A0_N%E1%BB%99i.png"
+          height="50" alt="MDB Logo" loading="lazy" />
+      </a>
+
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="/">Trang chủ <span class="sr-only">(current)</span></a>
+
+        </div>
+      </div>
+
+      <!-- Right links -->
+      <ul class="navbar-nav ms-auto d-flex flex-row">
+        <li>
+          <a class="btn btn-primary" href="/authen/login" role="button">ĐĂNG NHẬP</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+</header>

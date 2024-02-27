@@ -1,0 +1,56 @@
+<header>
+  <!-- Intro settings -->
+  <style>
+    #intro {
+      /* Margin to fix overlapping fixed navbar */
+      margin-top: 58px;
+    }
+
+    @media (max-width: 991px) {
+      #intro {
+        /* Margin to fix overlapping fixed navbar */
+        margin-top: 45px;
+      }
+    }
+  </style>
+
+  <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="/">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/vi/f/ff/Logo_Tr%C6%B0%E1%BB%9Dng_C%C3%B4ng_ngh%E1%BB%87_Th%C3%B4ng_tin_v%C3%A0_Truy%E1%BB%81n_th%C3%B4ng%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_B%C3%A1ch_khoa_H%C3%A0_N%E1%BB%99i.png"
+          height="50" alt="MDB Logo" loading="lazy" />
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="/">Trang chủ <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="/blogs/create">Tạo bài viết</a>
+        </div>
+      </div>
+
+      <!-- Right links -->
+      <!-- Avatar -->
+      <span class="dropdown">
+        <a href="#" class="nav-link dropdown-toggle d-flex align-items-center" data-toggle="dropdown" role="button"
+          aria-expanded="false"><img src="{{avatar}}" class="rounded-circle" height="22" alt="Avatar" loading="lazy" />
+          <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li>
+            <a class="dropdown-item" href="/logout">Đăng xuất</a>
+          </li>
+        </ul>
+      </span>
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+</header>
